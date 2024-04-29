@@ -1,0 +1,148 @@
+/* Estructurando GRID */
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    height: 100vh;
+    margin: 0;
+    background-color: #C57B57;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    /* Header */
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #96341c;
+    padding: 10px 0;
+    box-shadow: 10px 5px 5px black
+}
+
+    /* Logo */
+
+
+
+    /* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+li:hover{
+    color: aqua;
+}
+
+.nav-item {
+    margin-right: 2px;
+    color: #000000;
+}
+
+.nav-texto{
+    margin-right: 15px;
+}
+
+        /* Contenido Principal */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 10px;
+    padding: 20px;
+}
+#contenido-principal {
+    display: flex;
+    flex-direction: column;
+}
+    /* Secciones */
+.seccion {
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+}
+.seccion img {
+    height: 300px;
+    width: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+    /* La barra lateral */
+.barra-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.barra-lateral{
+    grid-area: sidebar;
+    flex: 10%;
+    padding: 45px;
+}
+.barra-lateral img{
+    border-radius: 5px;
+}
+    /* El pie */
+.pie-pagina {
+    grid-area: footer;
+    background-color: #632819;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+    /* Nav Logos y Hover */
+
+/* Modificando la parte de Personaje */
+.nav-logos1{
+    height: 41px;
+    width: 31px;
+    background-image: url(img/assets-nav/mugman.png);
+    background-size: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.nav-logos1:hover{
+    background-image: url(img/assets-nav/Cuphead_com_medo.png);
+}
+
+/* Modificando la parte de Skills */
+.nav-logos2{
+    height: 41px;
+    width: 31px;
+    background-image: url(img/assets-nav/Cuphead_corre_mano.png);
+    background-size: 29px;
+    display: block;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.nav-logos2:hover{
+    background-image: url(img/assets-nav/Dash_doente_doidao_do_cuphead.png);
+}
+
+/* Modificando la parte de Boss */
+.nav-logos3{
+    height: 26px;
+    width: 51px;
+    background-image: url(img/assets-nav/rey-dado1.png);
+    background-size: 52px;
+    display: block;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.nav-logos3:hover{
+    background-image: url(img/assets-nav/rey-dado2.png);
+}
